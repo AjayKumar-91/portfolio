@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Ajay Kumar | DevOps Engineer</title>
+<title>Ajay Kumar | DevOps Portfolio</title>
 
 <style>
 body {
@@ -13,41 +13,25 @@ body {
   color: #e5e7eb;
 }
 
-/* HERO */
-.hero {
+header {
   text-align: center;
-  padding: 80px 20px;
-  background: radial-gradient(circle at top, #1e293b, #0a0f1c);
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
 }
 
-.hero h1 {
-  font-size: 50px;
-  margin-bottom: 10px;
+header h1 {
+  font-size: 45px;
+  margin: 0;
 }
 
-.hero h2 {
-  color: #38bdf8;
-  font-size: 22px;
-  height: 30px;
+header p {
+  color: #94a3b8;
 }
 
-/* BUTTON */
-.btn {
-  margin-top: 20px;
-  display: inline-block;
-  padding: 12px 20px;
-  background: #38bdf8;
-  color: #000;
-  border-radius: 8px;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-/* SECTION */
 section {
-  max-width: 1100px;
+  max-width: 1000px;
   margin: auto;
-  padding: 50px 20px;
+  padding: 40px 20px;
 }
 
 h2 {
@@ -56,37 +40,29 @@ h2 {
   padding-left: 10px;
 }
 
-/* GRID */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
-}
-
 .card {
   background: #111827;
   padding: 20px;
+  margin-top: 15px;
   border-radius: 12px;
   border: 1px solid #1f2937;
-  transition: 0.3s;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  border-color: #38bdf8;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 15px;
 }
 
-/* TAGS */
 .tag {
   display: inline-block;
-  margin: 5px;
-  padding: 6px 10px;
+  padding: 5px 10px;
+  margin: 4px;
   background: #1f2937;
   border-radius: 6px;
   font-size: 12px;
 }
 
-/* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
@@ -98,68 +74,62 @@ footer {
 
 <body>
 
-<!-- HERO -->
-<div class="hero">
+<header>
   <h1>Ajay Kumar</h1>
+  <p>Java Developer | Production Support Engineer | DevOps Engineer (Transition)</p>
+  <p>📧 ajayvirendrasingh007@gmail.com | 📞 +91-9981105993 | 📍 Gwalior, MP</p>
+  <p>GitHub: AjayKumar-91</p>
+</header>
 
-  <h2>
-    Java Developer • Production Support • DevOps Engineer (Transition)
-  </h2>
-
-  <p>
-    AWS • Docker • Kubernetes • Jenkins • Linux • Terraform
-  </p>
-
-  <a class="btn" href="#projects">View Projects</a>
-</div>
-
-<!-- ABOUT -->
+<!-- SUMMARY -->
 <section>
-  <h2>👨‍💻 About Me</h2>
+  <h2>💡 Professional Summary</h2>
   <div class="card">
-    I am a Java Developer with 1.5+ years of experience in production support and backend systems.
-    Currently transitioning into DevOps/SRE with strong focus on automation, cloud infrastructure and CI/CD pipelines.
+    Experienced IT professional with 7+ years experience including 4+ years in Java Development and Production Support (L2).
+    Skilled in troubleshooting, incident management, API debugging, monitoring, and deployment support.
+    Currently transitioning into DevOps with AWS, Docker, Kubernetes, Jenkins, Terraform, CI/CD, Prometheus, and Grafana.
   </div>
 </section>
 
 <!-- SKILLS -->
 <section>
-  <h2>🛠️ Skills</h2>
+  <h2>🛠️ Technical Skills</h2>
   <div class="card">
-    <span class="tag">Java</span>
-    <span class="tag">Linux</span>
-    <span class="tag">Git</span>
-    <span class="tag">GitHub</span>
+    <b>Cloud & DevOps:</b><br/>
+    <span class="tag">AWS EC2</span>
+    <span class="tag">EKS</span>
+    <span class="tag">IAM</span>
+    <span class="tag">VPC</span>
     <span class="tag">Docker</span>
     <span class="tag">Kubernetes</span>
-    <span class="tag">Jenkins</span>
-    <span class="tag">AWS</span>
     <span class="tag">Terraform</span>
-    <span class="tag">CI/CD</span>
-  </div>
-</section>
 
-<!-- PROJECTS -->
-<section id="projects">
-  <h2>🚀 DevOps Projects</h2>
+    <br/><br/>
+    <b>CI/CD Tools:</b><br/>
+    <span class="tag">Jenkins</span>
+    <span class="tag">GitHub Webhooks</span>
+    <span class="tag">CodePipeline</span>
+    <span class="tag">CodeBuild</span>
 
-  <div class="grid">
+    <br/><br/>
+    <b>Monitoring:</b><br/>
+    <span class="tag">Prometheus</span>
+    <span class="tag">Grafana</span>
+    <span class="tag">Kibana</span>
+    <span class="tag">CloudWatch</span>
 
-    <div class="card">
-      <h3>CI/CD Pipeline (Jenkins)</h3>
-      <p>Automated build, test and deployment pipeline using Jenkins and GitHub webhook integration.</p>
-    </div>
+    <br/><br/>
+    <b>Programming:</b><br/>
+    <span class="tag">Java</span>
+    <span class="tag">Spring Boot</span>
+    <span class="tag">REST APIs</span>
 
-    <div class="card">
-      <h3>Dockerized Java App</h3>
-      <p>Containerized Spring Boot application with Docker for consistent deployment across environments.</p>
-    </div>
-
-    <div class="card">
-      <h3>AWS + Kubernetes Deployment</h3>
-      <p>Deployed application on AWS EKS with Kubernetes services and load balancing.</p>
-    </div>
-
+    <br/><br/>
+    <b>Databases:</b><br/>
+    <span class="tag">MySQL</span>
+    <span class="tag">PostgreSQL</span>
+    <span class="tag">MongoDB</span>
+    <span class="tag">Oracle</span>
   </div>
 </section>
 
@@ -168,24 +138,54 @@ footer {
   <h2>💼 Experience</h2>
 
   <div class="card">
-    <h3>Corporate Infotech Pvt Ltd</h3>
-    <p>Java Developer / Production Support Engineer</p>
+    <h3>Corporate Infotech Pvt. Ltd.</h3>
+    <p>Software Developer (Sep 2023 – Jan 2024)</p>
+    <p>Java 8, Spring Boot, REST APIs, Docker, Jenkins, MySQL, Postman</p>
   </div>
 
   <div class="card">
     <h3>Tata Technologies</h3>
-    <p>Java Support Engineer (L2 Production Support)</p>
+    <p>Java Developer / Production Support Engineer (Nov 2022 – Sep 2023)</p>
+    <p>L2 Support, Incident Management, Monitoring, Git, Tibero DB</p>
+  </div>
+
+  <div class="card">
+    <h3>Value Point Systems Pvt. Ltd.</h3>
+    <p>Software Engineer (Jul 2021 – Nov 2022)</p>
+    <p>GST Portal Support, Kibana, ServiceNow, Linux, Microservices Monitoring</p>
   </div>
 </section>
 
-<!-- CONTACT -->
+<!-- PROJECTS -->
 <section>
-  <h2>📫 Contact</h2>
+  <h2>🚀 DevOps Projects</h2>
 
+  <div class="grid">
+
+    <div class="card">
+      <h3>CI/CD Automation</h3>
+      <p>Dockerized React app, Jenkins pipeline, EC2 deployment, Grafana monitoring.</p>
+    </div>
+
+    <div class="card">
+      <h3>AWS EKS Deployment</h3>
+      <p>Terraform infra, Kubernetes cluster, Jenkins automation pipeline.</p>
+    </div>
+
+    <div class="card">
+      <h3>AWS CodePipeline Project</h3>
+      <p>CodeBuild, CodePipeline, EKS deployment with CloudWatch monitoring.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section>
+  <h2>🎓 Education</h2>
   <div class="card">
-    📧 Email: yourmail@gmail.com <br/>
-    💻 GitHub: github.com/AjayKumar-91 <br/>
-    🌐 Portfolio: https://AjayKumar-91.github.io/portfolio
+    Bachelor of Engineering (Electronics Engineering)  
+    <br/>Jiwaji University, Gwalior (2014)
   </div>
 </section>
 
