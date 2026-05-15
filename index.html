@@ -6,23 +6,48 @@
 <title>Ajay Kumar | DevOps Portfolio</title>
 
 <style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
 body {
-  margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(135deg, #050816, #0f172a, #1e293b);
   color: #e5e7eb;
+  line-height: 1.6;
 }
 
 /* HEADER */
 header {
   text-align: center;
-  padding: 80px 20px;
+  padding: 70px 20px;
   background: radial-gradient(circle at top, #1e293b, #0a0f1c);
+  position: relative;
+  overflow: hidden;
+}
+
+/* PROFILE IMAGE */
+.profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #38bdf8;
+  box-shadow: 0 0 30px rgba(56,189,248,0.4);
+  margin-bottom: 25px;
+  transition: 0.4s ease;
+}
+
+.profile-img:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(167,139,250,0.5);
 }
 
 header h1 {
   font-size: 52px;
-  margin: 0;
+  margin-bottom: 10px;
   background: linear-gradient(90deg, #38bdf8, #a78bfa);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -30,7 +55,30 @@ header h1 {
 
 header p {
   color: #94a3b8;
-  font-size: 16px;
+  font-size: 18px;
+}
+
+.header-info {
+  margin-top: 15px;
+  color: #cbd5e1;
+  font-size: 15px;
+}
+
+/* BUTTON */
+.badge {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 22px;
+  background: linear-gradient(90deg, #38bdf8, #a78bfa);
+  color: black;
+  border-radius: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.badge:hover{
+  transform: translateY(-3px);
 }
 
 /* SECTION */
@@ -42,18 +90,19 @@ section {
 
 h2 {
   color: #38bdf8;
-  font-size: 24px;
+  font-size: 26px;
   border-left: 4px solid #38bdf8;
-  padding-left: 10px;
+  padding-left: 12px;
+  margin-bottom: 20px;
 }
 
-/* GLASS CARD */
+/* CARD */
 .card {
   background: rgba(17, 24, 39, 0.7);
   backdrop-filter: blur(10px);
-  padding: 20px;
+  padding: 22px;
   margin-top: 15px;
-  border-radius: 14px;
+  border-radius: 16px;
   border: 1px solid rgba(56, 189, 248, 0.2);
   transition: 0.3s;
 }
@@ -68,24 +117,30 @@ h2 {
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 15px;
+  gap: 18px;
 }
 
 /* TAGS */
 .tag {
   display: inline-block;
-  padding: 6px 12px;
+  padding: 7px 14px;
   margin: 5px;
   background: linear-gradient(90deg, #1e293b, #0f172a);
   border: 1px solid #334155;
   border-radius: 20px;
-  font-size: 12px;
+  font-size: 13px;
+  transition: 0.3s;
 }
 
-/* HEADER INFO */
-.header-info {
-  margin-top: 10px;
-  color: #cbd5e1;
+.tag:hover{
+  border-color:#38bdf8;
+  transform:scale(1.05);
+}
+
+/* EXPERIENCE */
+.card h3{
+  color:#ffffff;
+  margin-bottom:8px;
 }
 
 /* FOOTER */
@@ -97,16 +152,21 @@ footer {
   margin-top: 40px;
 }
 
-/* BUTTON STYLE */
-.badge {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 18px;
-  background: linear-gradient(90deg, #38bdf8, #a78bfa);
-  color: black;
-  border-radius: 10px;
-  font-weight: bold;
-  text-decoration: none;
+/* RESPONSIVE */
+@media(max-width:768px){
+
+  header h1{
+    font-size:38px;
+  }
+
+  .profile-img{
+    width:140px;
+    height:140px;
+  }
+
+  header p{
+    font-size:16px;
+  }
 }
 </style>
 </head>
@@ -114,30 +174,44 @@ footer {
 <body>
 
 <header>
+
+  <!-- ADD YOUR PHOTO HERE -->
+  <img src="WhatsApp Image 2026-05-15 at 11.26.18 PM.jpeg" 
+       alt="Ajay Kumar" 
+       class="profile-img">
+
   <h1>Ajay Kumar</h1>
 
-  <p>Java Developer | Production Support Engineer | DevOps Engineer (Transition)</p>
+  <p>
+    Java Developer | Production Support Engineer | DevOps Engineer (Transition)
+  </p>
 
   <div class="header-info">
-    📧 ajayvirendrasingh007@gmail.com | 📞 +91-9981105993 | 📍 Gwalior, MP
+    📧 ajayvirendrasingh007@gmail.com <br/>
+    📞 +91-9981105993 <br/>
+    📍 Gwalior, Madhya Pradesh
   </div>
 
-  <a class="badge" href="#">DevOps Portfolio</a>
+  <a class="badge" href="#">
+    DevOps Portfolio
+  </a>
+
 </header>
 
 <!-- SUMMARY -->
 <section>
   <h2>💡 Professional Summary</h2>
+
   <div class="card">
-    Experienced IT professional with 7+ years experience including 4+ years in Java Development and Production Support (L2).
-    Skilled in troubleshooting, incident management, API debugging, monitoring, and deployment support.
-    Currently transitioning into DevOps with AWS, Docker, Kubernetes, Jenkins, Terraform, CI/CD, Prometheus, and Grafana.
+    Experienced IT professional with 7+ years of experience including 4+ years in Java Development and Production Support (L2). Skilled in troubleshooting, incident management, API debugging, monitoring, deployment support, and Linux troubleshooting. Currently transitioning into DevOps with hands-on experience in AWS, Docker, Kubernetes, Jenkins, Terraform, CI/CD automation, Prometheus, Grafana, and Cloud technologies.
   </div>
 </section>
 
 <!-- SKILLS -->
 <section>
+
   <h2>🛠️ Technical Skills</h2>
+
   <div class="card">
 
     <b>Cloud & DevOps</b><br/>
@@ -149,28 +223,34 @@ footer {
     <span class="tag">Terraform</span>
 
     <br/><br/>
+
     <b>CI/CD</b><br/>
     <span class="tag">Jenkins</span>
     <span class="tag">GitHub Actions</span>
-    <span class="tag">CodePipeline</span>
+    <span class="tag">AWS CodePipeline</span>
 
     <br/><br/>
+
     <b>Monitoring</b><br/>
     <span class="tag">Prometheus</span>
     <span class="tag">Grafana</span>
     <span class="tag">CloudWatch</span>
 
     <br/><br/>
+
     <b>Programming</b><br/>
     <span class="tag">Java</span>
     <span class="tag">Spring Boot</span>
     <span class="tag">REST APIs</span>
+    <span class="tag">Linux</span>
 
   </div>
+
 </section>
 
 <!-- EXPERIENCE -->
 <section>
+
   <h2>💼 Experience</h2>
 
   <div class="card">
@@ -187,38 +267,44 @@ footer {
     <h3>Value Point Systems</h3>
     Software Engineer (Kibana, Linux, Incident Management)
   </div>
+
 </section>
 
 <!-- PROJECTS -->
 <section>
+
   <h2>🚀 DevOps Projects</h2>
 
   <div class="grid">
 
     <div class="card">
-      <h3>CI/CD Pipeline</h3>
-      Docker + Jenkins + AWS EC2 + Grafana
+      <h3>CI/CD Pipeline Automation</h3>
+      Jenkins + Docker + AWS EC2 + Grafana Monitoring
     </div>
 
     <div class="card">
       <h3>AWS EKS Deployment</h3>
-      Terraform + Kubernetes + Jenkins automation
+      Terraform + Kubernetes + Jenkins Automation
     </div>
 
     <div class="card">
-      <h3>CodePipeline Project</h3>
-      AWS CodeBuild + EKS + CloudWatch
+      <h3>AWS CodePipeline Project</h3>
+      AWS CodeBuild + EKS + CloudWatch Integration
     </div>
 
   </div>
+
 </section>
 
 <!-- EDUCATION -->
 <section>
+
   <h2>🎓 Education</h2>
+
   <div class="card">
     B.E. Electronics Engineering – Jiwaji University, Gwalior (2014)
   </div>
+
 </section>
 
 <footer>
