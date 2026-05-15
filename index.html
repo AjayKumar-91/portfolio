@@ -1,5 +1,3 @@
-update my portfolio website with my photo
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,21 +16,41 @@ body {
 /* HEADER */
 header {
   text-align: center;
-  padding: 80px 20px;
+  padding: 70px 20px;
   background: radial-gradient(circle at top, #1e293b, #0a0f1c);
 }
 
+/* PROFILE IMAGE FIX */
+.profile-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #38bdf8;
+  box-shadow: 0 0 25px rgba(56,189,248,0.4);
+  margin-bottom: 20px;
+}
+
+/* NAME */
 header h1 {
   font-size: 52px;
-  margin: 0;
+  margin: 10px 0 0;
   background: linear-gradient(90deg, #38bdf8, #a78bfa);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+/* SUBTEXT */
 header p {
   color: #94a3b8;
   font-size: 16px;
+}
+
+/* CONTACT INFO */
+.header-info {
+  margin-top: 10px;
+  color: #cbd5e1;
+  font-size: 14px;
 }
 
 /* SECTION */
@@ -49,7 +67,7 @@ h2 {
   padding-left: 10px;
 }
 
-/* GLASS CARD */
+/* CARD */
 .card {
   background: rgba(17, 24, 39, 0.7);
   backdrop-filter: blur(10px);
@@ -84,22 +102,7 @@ h2 {
   font-size: 12px;
 }
 
-/* HEADER INFO */
-.header-info {
-  margin-top: 10px;
-  color: #cbd5e1;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 25px;
-  background: #0a0f1c;
-  color: #94a3b8;
-  margin-top: 40px;
-}
-
-/* BUTTON STYLE */
+/* BADGE */
 .badge {
   display: inline-block;
   margin-top: 15px;
@@ -110,21 +113,42 @@ footer {
   font-weight: bold;
   text-decoration: none;
 }
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #0a0f1c;
+  color: #94a3b8;
+  margin-top: 40px;
+}
 </style>
 </head>
 
 <body>
 
 <header>
+
+  <!-- PROFILE PHOTO ADDED -->
+  <img src="profile.jpeg"
+       alt="Ajay Kumar"
+       class="profile-img"
+       onerror="this.src='https://via.placeholder.com/160'">
+
   <h1>Ajay Kumar</h1>
 
   <p>Java Developer | Production Support Engineer | DevOps Engineer (Transition)</p>
 
   <div class="header-info">
-    📧 ajayvirendrasingh007@gmail.com | 📞 +91-9981105993 | 📍 Gwalior, MP
+    📧 ajayvirendrasingh007@gmail.com |
+    📞 +91-9981105993 |
+    📍 Gwalior, MP
   </div>
 
-  <a class="badge" href="#">DevOps Portfolio</a>
+  <a class="badge" href="mailto:ajayvirendrasingh007@gmail.com?subject=DevOps%20Opportunity">
+    DevOps Portfolio
+  </a>
+
 </header>
 
 <!-- SUMMARY -->
@@ -133,7 +157,7 @@ footer {
   <div class="card">
     Experienced IT professional with 7+ years experience including 4+ years in Java Development and Production Support (L2).
     Skilled in troubleshooting, incident management, API debugging, monitoring, and deployment support.
-    Currently transitioning into DevOps with AWS, Docker, Kubernetes, Jenkins, Terraform, CI/CD, Prometheus, and Grafana.
+    Currently transitioning into DevOps with AWS, Docker, Kubernetes, Jenkins, Terraform, CI/CD.
   </div>
 </section>
 
@@ -141,33 +165,15 @@ footer {
 <section>
   <h2>🛠️ Technical Skills</h2>
   <div class="card">
-
-    <b>Cloud & DevOps</b><br/>
     <span class="tag">AWS</span>
     <span class="tag">EC2</span>
     <span class="tag">EKS</span>
     <span class="tag">Docker</span>
     <span class="tag">Kubernetes</span>
     <span class="tag">Terraform</span>
-
-    <br/><br/>
-    <b>CI/CD</b><br/>
     <span class="tag">Jenkins</span>
-    <span class="tag">GitHub Actions</span>
-    <span class="tag">CodePipeline</span>
-
-    <br/><br/>
-    <b>Monitoring</b><br/>
-    <span class="tag">Prometheus</span>
-    <span class="tag">Grafana</span>
-    <span class="tag">CloudWatch</span>
-
-    <br/><br/>
-    <b>Programming</b><br/>
     <span class="tag">Java</span>
     <span class="tag">Spring Boot</span>
-    <span class="tag">REST APIs</span>
-
   </div>
 </section>
 
@@ -196,22 +202,9 @@ footer {
   <h2>🚀 DevOps Projects</h2>
 
   <div class="grid">
-
-    <div class="card">
-      <h3>CI/CD Pipeline</h3>
-      Docker + Jenkins + AWS EC2 + Grafana
-    </div>
-
-    <div class="card">
-      <h3>AWS EKS Deployment</h3>
-      Terraform + Kubernetes + Jenkins automation
-    </div>
-
-    <div class="card">
-      <h3>CodePipeline Project</h3>
-      AWS CodeBuild + EKS + CloudWatch
-    </div>
-
+    <div class="card">CI/CD Pipeline (Docker + Jenkins + AWS EC2)</div>
+    <div class="card">AWS EKS Deployment (Terraform + Kubernetes)</div>
+    <div class="card">CodePipeline Project (AWS + CloudWatch)</div>
   </div>
 </section>
 
