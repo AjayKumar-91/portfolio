@@ -16,7 +16,7 @@ body {
 /* HEADER */
 header {
   text-align: center;
-  padding: 80px 20px;
+  padding: 70px 20px;
   background: radial-gradient(circle at top, #1e293b, #0a0f1c);
 }
 
@@ -31,7 +31,6 @@ header {
   box-shadow: 0 0 25px rgba(56,189,248,0.4);
 }
 
-/* NAME */
 header h1 {
   font-size: 52px;
   margin: 0;
@@ -42,7 +41,29 @@ header h1 {
 
 header p {
   color: #94a3b8;
-  font-size: 16px;
+}
+
+/* SOCIAL */
+.social-links {
+  margin-top: 15px;
+}
+
+.social-links a {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 8px;
+  background: rgba(17,24,39,0.8);
+  border: 1px solid #334155;
+  color: #e5e7eb;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  border-color: #38bdf8;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(56,189,248,0.2);
 }
 
 /* SECTION */
@@ -54,94 +75,23 @@ section {
 
 h2 {
   color: #38bdf8;
-  font-size: 24px;
   border-left: 4px solid #38bdf8;
   padding-left: 10px;
 }
 
-/* GLASS CARD */
 .card {
   background: rgba(17, 24, 39, 0.7);
-  backdrop-filter: blur(10px);
   padding: 20px;
-  margin-top: 15px;
   border-radius: 14px;
-  border: 1px solid rgba(56, 189, 248, 0.2);
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  border-color: #38bdf8;
-  box-shadow: 0 10px 25px rgba(56,189,248,0.2);
-}
-
-/* GRID */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 15px;
-}
-
-/* TAGS */
-.tag {
-  display: inline-block;
-  padding: 6px 12px;
-  margin: 5px;
-  background: linear-gradient(90deg, #1e293b, #0f172a);
-  border: 1px solid #334155;
-  border-radius: 20px;
-  font-size: 12px;
-}
-
-/* HEADER INFO */
-.header-info {
-  margin-top: 10px;
-  color: #cbd5e1;
+  margin-top: 15px;
 }
 
 /* FOOTER */
 footer {
   text-align: center;
-  padding: 25px;
+  padding: 20px;
   background: #0a0f1c;
   color: #94a3b8;
-  margin-top: 40px;
-}
-
-/* BUTTON STYLE */
-.badge {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 18px;
-  background: linear-gradient(90deg, #38bdf8, #a78bfa);
-  color: black;
-  border-radius: 10px;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-/* SOCIAL LINKS */
-.social-links {
-  margin-top: 20px;
-}
-
-.social-links a {
-  display: inline-block;
-  margin: 5px;
-  padding: 10px 16px;
-  text-decoration: none;
-  border-radius: 8px;
-  background: rgba(17, 24, 39, 0.8);
-  border: 1px solid #334155;
-  color: #e5e7eb;
-  transition: 0.3s;
-}
-
-.social-links a:hover {
-  border-color: #38bdf8;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(56,189,248,0.2);
 }
 </style>
 </head>
@@ -150,26 +100,16 @@ footer {
 
 <header>
 
-  <!-- ADD YOUR IMAGE -->
-  <img src="profile.jpg" alt="Ajay Kumar" class="profile-img">
+  <!-- IMAGE FIX (IMPORTANT) -->
+  <img src="./profile.jpg" alt="Ajay Kumar" class="profile-img">
 
   <h1>Ajay Kumar</h1>
+  <p>Java Developer | Production Support Engineer | DevOps Engineer</p>
 
-  <p>
-    Java Developer | Production Support Engineer | DevOps Engineer (Transition)
-  </p>
-
-  <div class="header-info">
-    📧 ajayvirendrasingh007@gmail.com |
-    📞 +91-9981105993 |
-    📍 Gwalior, MP
-  </div>
-
-  <a class="badge" href="#">DevOps Portfolio</a>
-
-  <!-- SOCIAL LINKS -->
+  <!-- CONTACT INFO -->
   <div class="social-links">
 
+    <!-- FIXED MAILTO -->
     <a href="mailto:ajayvirendrasingh007@gmail.com">
       📧 Gmail
     </a>
@@ -186,110 +126,15 @@ footer {
 
 </header>
 
-<!-- SUMMARY -->
 <section>
-  <h2>💡 Professional Summary</h2>
-
+  <h2>💡 Summary</h2>
   <div class="card">
-    Experienced IT professional with 7+ years experience including 4+ years in Java Development and Production Support (L2).
-    Skilled in troubleshooting, incident management, API debugging, monitoring, and deployment support.
-    Currently transitioning into DevOps with AWS, Docker, Kubernetes, Jenkins, Terraform, CI/CD, Prometheus, and Grafana.
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section>
-  <h2>🛠️ Technical Skills</h2>
-
-  <div class="card">
-
-    <b>Cloud & DevOps</b><br/>
-    <span class="tag">AWS</span>
-    <span class="tag">EC2</span>
-    <span class="tag">EKS</span>
-    <span class="tag">Docker</span>
-    <span class="tag">Kubernetes</span>
-    <span class="tag">Terraform</span>
-
-    <br/><br/>
-
-    <b>CI/CD</b><br/>
-    <span class="tag">Jenkins</span>
-    <span class="tag">GitHub Actions</span>
-    <span class="tag">CodePipeline</span>
-
-    <br/><br/>
-
-    <b>Monitoring</b><br/>
-    <span class="tag">Prometheus</span>
-    <span class="tag">Grafana</span>
-    <span class="tag">CloudWatch</span>
-
-    <br/><br/>
-
-    <b>Programming</b><br/>
-    <span class="tag">Java</span>
-    <span class="tag">Spring Boot</span>
-    <span class="tag">REST APIs</span>
-
-  </div>
-</section>
-
-<!-- EXPERIENCE -->
-<section>
-  <h2>💼 Experience</h2>
-
-  <div class="card">
-    <h3>Corporate Infotech Pvt. Ltd.</h3>
-    Software Developer (Java, Spring Boot, Docker, Jenkins)
-  </div>
-
-  <div class="card">
-    <h3>Tata Technologies</h3>
-    Production Support Engineer (L2 Support, Monitoring, Debugging)
-  </div>
-
-  <div class="card">
-    <h3>Value Point Systems</h3>
-    Software Engineer (Kibana, Linux, Incident Management)
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section>
-  <h2>🚀 DevOps Projects</h2>
-
-  <div class="grid">
-
-    <div class="card">
-      <h3>CI/CD Pipeline</h3>
-      Docker + Jenkins + AWS EC2 + Grafana
-    </div>
-
-    <div class="card">
-      <h3>AWS EKS Deployment</h3>
-      Terraform + Kubernetes + Jenkins automation
-    </div>
-
-    <div class="card">
-      <h3>CodePipeline Project</h3>
-      AWS CodeBuild + EKS + CloudWatch
-    </div>
-
-  </div>
-</section>
-
-<!-- EDUCATION -->
-<section>
-  <h2>🎓 Education</h2>
-
-  <div class="card">
-    B.E. Electronics Engineering – Jiwaji University, Gwalior (2014)
+    Experienced IT professional with Java, Production Support and DevOps skills.
   </div>
 </section>
 
 <footer>
-  © 2026 Ajay Kumar | Built with DevOps Passion 🚀
+  © 2026 Ajay Kumar
 </footer>
 
 </body>
