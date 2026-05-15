@@ -13,14 +13,33 @@ body {
   color: #e5e7eb;
 }
 
-/* HEADER */
-header {
+/* ===== FAANG HEADER ===== */
+.hero {
+  position: relative;
   text-align: center;
-  padding: 70px 20px;
-  background: radial-gradient(circle at top, #1e293b, #0a0f1c);
+  padding: 90px 20px;
+  background: radial-gradient(circle at top, #1e293b, #050816);
+  overflow: hidden;
 }
 
-/* PROFILE IMAGE */
+.glow-bg {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: #38bdf8;
+  filter: blur(120px);
+  opacity: 0.15;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: pulse 6s infinite;
+}
+
+@keyframes pulse {
+  0%,100% { transform: translateX(-50%) scale(1); }
+  50% { transform: translateX(-50%) scale(1.3); }
+}
+
 .profile-img {
   width: 160px;
   height: 160px;
@@ -28,27 +47,33 @@ header {
   object-fit: cover;
   border: 4px solid #38bdf8;
   box-shadow: 0 0 25px rgba(56,189,248,0.4);
-  margin-bottom: 20px;
 }
 
-/* NAME */
-header h1 {
-  font-size: 52px;
-  margin: 10px 0 0;
-  background: linear-gradient(90deg, #38bdf8, #a78bfa);
+.floating {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.title {
+  font-size: 54px;
+  margin-top: 15px;
+  background: linear-gradient(90deg,#38bdf8,#a78bfa);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* SUBTEXT */
-header p {
+.subtitle {
   color: #94a3b8;
   font-size: 16px;
+  margin-top: 10px;
 }
 
-/* CONTACT INFO */
 .header-info {
-  margin-top: 10px;
+  margin-top: 15px;
   color: #cbd5e1;
   font-size: 14px;
 }
@@ -56,14 +81,24 @@ header p {
 .header-info a {
   color: #38bdf8;
   text-decoration: none;
-  font-weight: 500;
 }
 
 .header-info a:hover {
   text-decoration: underline;
 }
 
-/* SECTION */
+.badge {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 18px;
+  background: linear-gradient(90deg,#38bdf8,#a78bfa);
+  color: black;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* ===== SECTION ===== */
 section {
   max-width: 1100px;
   margin: auto;
@@ -77,7 +112,7 @@ h2 {
   padding-left: 10px;
 }
 
-/* CARD */
+/* ===== CARD ===== */
 .card {
   background: rgba(17, 24, 39, 0.7);
   backdrop-filter: blur(10px);
@@ -89,9 +124,8 @@ h2 {
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  border-color: #38bdf8;
-  box-shadow: 0 10px 25px rgba(56,189,248,0.2);
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(56,189,248,0.2);
 }
 
 /* GRID */
@@ -106,22 +140,10 @@ h2 {
   display: inline-block;
   padding: 6px 12px;
   margin: 5px;
-  background: linear-gradient(90deg, #1e293b, #0f172a);
+  background: linear-gradient(90deg,#1e293b,#0f172a);
   border: 1px solid #334155;
   border-radius: 20px;
   font-size: 12px;
-}
-
-/* BADGE */
-.badge {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 18px;
-  background: linear-gradient(90deg, #38bdf8, #a78bfa);
-  color: black;
-  border-radius: 10px;
-  font-weight: bold;
-  text-decoration: none;
 }
 
 /* FOOTER */
@@ -137,70 +159,73 @@ footer {
 
 <body>
 
-<header>
+<!-- ===== HERO DASHBOARD ===== -->
+<header class="hero">
+
+  <div class="glow-bg"></div>
 
   <img src="profile.jpeg"
+       class="profile-img floating"
        alt="Ajay Kumar"
-       class="profile-img"
        onerror="this.src='https://via.placeholder.com/160'">
 
-  <h1>Ajay Kumar</h1>
+  <h1 class="title">Ajay Kumar</h1>
 
-  <p>Java Developer | Production Support Engineer | DevOps Engineer (Transition)</p>
+  <p class="subtitle">
+    Java Developer • Production Support Engineer • DevOps Engineer (AWS | Kubernetes | CI/CD)
+  </p>
 
   <div class="header-info">
 
     💌 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ajayvirendrasingh007@gmail.com&su=DevOps%20Opportunity"
-       target="_blank">
-      Email Me
-    </a> |
+       target="_blank">Email</a> |
 
     🔗 <a href="https://www.linkedin.com/in/ajay-kumar-6a393a1ab/"
-       target="_blank">
-      LinkedIn
-    </a> |
+       target="_blank">LinkedIn</a> |
 
     💻 <a href="https://github.com/AjayKumar-91"
-       target="_blank">
-      GitHub
-    </a>
+       target="_blank">GitHub</a>
 
     <br><br>
 
-    📞 +91-9981105993 |
-    📍 Gwalior, MP
+    📞 +91-9981105993 | 📍 Gwalior, MP
   </div>
 
-  <a class="badge" href="mailto:ajayvirendrasingh007@gmail.com?subject=DevOps%20Opportunity">
-    DevOps Portfolio
+  <a class="badge" href="Ajay_DevOps_Resume.pdf" download>
+    ⬇️ Download Resume
   </a>
 
 </header>
 
+<!-- ===== QR SECTION ===== -->
 <section>
-  <h2>📄 Resume & QR Access</h2>
+  <h2>📄 Resume & Quick Access</h2>
 
   <div class="card" style="text-align:center;">
 
-    <p>Scan QR to visit my GitHub profile instantly</p>
+    <h3>🔗 Scan to Open My DevOps Portfolio</h3>
 
-    <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https://github.com/AjayKumar-91"
+    <p style="color:#94a3b8;">
+      View GitHub projects, CI/CD pipelines & cloud deployments instantly
+    </p>
+
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=170x170&data=https://github.com/AjayKumar-91"
          alt="QR Code"
-         style="margin:10px auto; border-radius:10px; border:2px solid #38bdf8;">
+         style="margin:15px auto; border-radius:12px; border:2px solid #38bdf8;">
 
     <br><br>
 
-    <a class="badge"
-       href="Ajay_DevOps_Resume.pdf"
-       download>
+    <a class="badge" href="Ajay_DevOps_Resume.pdf" download>
       ⬇️ Download Resume (PDF)
     </a>
 
   </div>
-</section>  
+</section>
 
+<!-- ===== SUMMARY ===== -->
 <section>
   <h2>💡 Professional Summary</h2>
+
   <div class="card">
     Experienced IT professional with 7+ years experience including 4+ years in Java Development and Production Support (L2).
     Skilled in troubleshooting, incident management, API debugging, monitoring, and deployment support.
@@ -208,6 +233,7 @@ footer {
   </div>
 </section>
 
+<!-- ===== SKILLS ===== -->
 <section>
   <h2>🛠️ Technical Skills</h2>
 
@@ -218,125 +244,80 @@ footer {
     <span class="tag">Docker</span>
     <span class="tag">Kubernetes</span>
     <span class="tag">Terraform</span>
-    <span class="tag">CI/CD Pipelines</span>
     <span class="tag">Jenkins</span>
-    <span class="tag">AWS CodePipeline</span>
+    <span class="tag">CI/CD Pipelines</span>
 
-    <br><br>
-
-    <h3>💻 Programming & Backend</h3>
+    <h3>💻 Backend</h3>
     <span class="tag">Java</span>
     <span class="tag">Spring Boot</span>
     <span class="tag">REST APIs</span>
 
-    <br><br>
-
-    <h3>📊 Monitoring & Logging</h3>
+    <h3>📊 Monitoring</h3>
     <span class="tag">Prometheus</span>
     <span class="tag">Grafana</span>
     <span class="tag">CloudWatch</span>
-    <span class="tag">Kibana</span>
 
-    <br><br>
-
-    <h3>🖥️ Operating Systems & Tools</h3>
+    <h3>🖥️ Tools</h3>
     <span class="tag">Linux</span>
-    <span class="tag">Git & GitHub</span>
+    <span class="tag">Git</span>
     <span class="tag">Shell Scripting</span>
-    <span class="tag">Maven</span>
 
   </div>
 </section>
 
+<!-- ===== EXPERIENCE ===== -->
 <section>
   <h2>💼 Experience</h2>
 
   <div class="card">
     <h3>Corporate Infotech Pvt. Ltd.</h3>
-    Software Developer (Java, Spring Boot, Docker, Jenkins, Git, MYSQL, Spring Boot, Hibernate, and JPA)
+    Java, Spring Boot, Docker, Jenkins, MySQL, Hibernate, JPA
   </div>
 
   <div class="card">
     <h3>Tata Technologies</h3>
-    Production Support Engineer (L2 Support, Monitoring, Debugging, Postman, Java, Git, Tibero DB, Spring Boot applications and REST APIs)
+    L2 Support, Monitoring, Debugging, REST APIs, Tibero DB
   </div>
 
   <div class="card">
     <h3>Value Point Systems</h3>
-    Software Engineer (Kibana, Linux, Incident Management, Application L2 Support, Talisma, MYSQL, Monitoring tools)
+    Kibana, Linux, Incident Management, Monitoring Tools
   </div>
 </section>
 
-<!-- PROJECTS -->
+<!-- ===== PROJECTS ===== -->
 <section>
   <h2>🚀 DevOps Projects</h2>
 
   <div class="grid">
 
     <div class="card">
-      <h3>React Application CI/CD Pipeline</h3>
-
-      <p>
-        📦 Project Repo:
-        <a href="https://github.com/AjayKumar-91/react-app-devops"
-           target="_blank" rel="noopener noreferrer"
-           style="color:#38bdf8;">
-          react-app-devops
-        </a>
-      </p>
-
-      <ul>
-        <li>End-to-end CI/CD pipeline using Jenkins</li>
-        <li>GitHub webhook integration for automation</li>
-        <li>Docker containerized deployment</li>
-        <li>Deployed on AWS EC2</li>
-        <li>Monitoring with Prometheus & Grafana</li>
-      </ul>
+      <h3>React CI/CD Pipeline</h3>
+      <a href="https://github.com/AjayKumar-91/react-app-devops"
+         target="_blank" style="color:#38bdf8;">
+         GitHub Repo
+      </a>
     </div>
 
     <div class="card">
-      <h3>TrendStore EKS Kubernetes Deployment</h3>
-
-      <p>
-        📦 Project Repo:
-        <a href="https://github.com/AjayKumar-91/trendstore-devops"
-           target="_blank" rel="noopener noreferrer"
-           style="color:#38bdf8;">
-          trendstore-devops
-        </a>
-      </p>
-
-      <ul>
-        <li>Terraform-based AWS infrastructure provisioning</li>
-        <li>Kubernetes (EKS) cluster deployment</li>
-        <li>Jenkins CI/CD automation pipeline</li>
-        <li>Docker image build & deployment</li>
-        <li>LoadBalancer service exposure</li>
-      </ul>
+      <h3>TrendStore EKS Deployment</h3>
+      <a href="https://github.com/AjayKumar-91/trendstore-devops"
+         target="_blank" style="color:#38bdf8;">
+         GitHub Repo
+      </a>
     </div>
 
     <div class="card">
-      <h3>BrainTasks AWS DevOps Pipeline</h3>
-
-      <p>
-        📦 Project Repo:
-        <a href="https://github.com/AjayKumar-91/brain-tasks-devops"
-           target="_blank" rel="noopener noreferrer"
-           style="color:#38bdf8;">
-          brain-tasks-devops
-        </a>
-      </p>
-
-      <ul>
-        <li>AWS CodePipeline + CodeBuild automation</li>
-        <li>Dockerized application deployment</li>
-        <li>EKS-based Kubernetes deployment</li>
-        <li>CloudWatch logging & monitoring</li>
-      </ul>
+      <h3>BrainTasks AWS Pipeline</h3>
+      <a href="https://github.com/AjayKumar-91/brain-tasks-devops"
+         target="_blank" style="color:#38bdf8;">
+         GitHub Repo
+      </a>
     </div>
 
   </div>
 </section>
+
 <footer>
   © 2026 Ajay Kumar | Built with DevOps Passion 🚀
 </footer>
