@@ -13,10 +13,9 @@ body {
   color: #e5e7eb;
 }
 
-/* HEADER */
 header {
   text-align: center;
-  padding: 70px 20px;
+  padding: 80px 20px;
   background: radial-gradient(circle at top, #1e293b, #0a0f1c);
 }
 
@@ -31,7 +30,8 @@ header {
   box-shadow: 0 0 25px rgba(56,189,248,0.4);
 }
 
-header h1 {
+/* rest same styles */
+h1 {
   font-size: 52px;
   margin: 0;
   background: linear-gradient(90deg, #38bdf8, #a78bfa);
@@ -39,59 +39,29 @@ header h1 {
   -webkit-text-fill-color: transparent;
 }
 
-header p {
-  color: #94a3b8;
-}
-
-/* SOCIAL */
-.social-links {
-  margin-top: 15px;
-}
+header p { color: #94a3b8; }
 
 .social-links a {
   display: inline-block;
   margin: 5px;
-  padding: 10px 15px;
+  padding: 10px 16px;
   text-decoration: none;
   border-radius: 8px;
-  background: rgba(17,24,39,0.8);
+  background: rgba(17, 24, 39, 0.8);
   border: 1px solid #334155;
   color: #e5e7eb;
-  transition: 0.3s;
 }
 
-.social-links a:hover {
-  border-color: #38bdf8;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(56,189,248,0.2);
-}
-
-/* SECTION */
-section {
-  max-width: 1100px;
-  margin: auto;
-  padding: 40px 20px;
-}
-
-h2 {
-  color: #38bdf8;
-  border-left: 4px solid #38bdf8;
-  padding-left: 10px;
-}
-
-.card {
-  background: rgba(17, 24, 39, 0.7);
-  padding: 20px;
-  border-radius: 14px;
+/* badge */
+.badge {
+  display: inline-block;
   margin-top: 15px;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #0a0f1c;
-  color: #94a3b8;
+  padding: 10px 18px;
+  background: linear-gradient(90deg, #38bdf8, #a78bfa);
+  color: black;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
 }
 </style>
 </head>
@@ -100,18 +70,28 @@ footer {
 
 <header>
 
-  <!-- IMAGE FIX (IMPORTANT) -->
-  <img src="./profile.jpg" alt="Ajay Kumar" class="profile-img">
+  <!-- IMPORTANT: keep image in same folder OR fix path -->
+  <img src="./profile.jpg" alt="Ajay Kumar Profile Photo" class="profile-img"
+       onerror="this.style.display='none'; alert('profile.jpg not found in same folder as index.html');">
 
   <h1>Ajay Kumar</h1>
-  <p>Java Developer | Production Support Engineer | DevOps Engineer</p>
 
-  <!-- CONTACT INFO -->
+  <p>Java Developer | Production Support Engineer | DevOps Engineer (Transition)</p>
+
+  <div>
+    📧 ajayvirendrasingh007@gmail.com |
+    📞 +91-9981105993 |
+    📍 Gwalior, MP
+  </div>
+
+  <a class="badge" href="#">DevOps Portfolio</a>
+
+  <!-- SOCIAL -->
   <div class="social-links">
 
-    <!-- FIXED MAILTO -->
-    <a href="mailto:ajayvirendrasingh007@gmail.com">
-      📧 Gmail
+    <!-- FIXED EMAIL (direct open mail app + subject/body) -->
+    <a href="mailto:ajayvirendrasingh007@gmail.com?subject=DevOps%20Opportunity&body=Hello%20Ajay,">
+      📧 Send Email
     </a>
 
     <a href="https://www.linkedin.com/in/ajay-kumar-6a393a1ab/" target="_blank">
@@ -127,14 +107,15 @@ footer {
 </header>
 
 <section>
-  <h2>💡 Summary</h2>
+  <h2>💡 Professional Summary</h2>
   <div class="card">
-    Experienced IT professional with Java, Production Support and DevOps skills.
+    Experienced IT professional with Java + Production Support background,
+    currently transitioning into DevOps (AWS, Docker, Kubernetes, Jenkins, Terraform, CI/CD).
   </div>
 </section>
 
 <footer>
-  © 2026 Ajay Kumar
+  © 2026 Ajay Kumar | Built with DevOps Passion 🚀
 </footer>
 
 </body>
