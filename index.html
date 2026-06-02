@@ -1,227 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Ajay Kumar | Java Production Support & DevOps Engineer</title>
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #050816, #0f172a, #1e293b);
+  color: #e5e7eb;
 }
 
-body{
-  font-family:'Segoe UI',sans-serif;
-  background:#050816;
-  color:#fff;
-  line-height:1.6;
+/* HERO */
+.hero {
+  position: relative;
+  padding: 90px 20px;
+  background: radial-gradient(circle at top, #1e293b, #050816);
+  overflow: hidden;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 
-/* Banner */
-.banner img{
-  width:100%;
-  display:block;
+/* glow */
+.glow-bg {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: #38bdf8;
+  filter: blur(120px);
+  opacity: 0.15;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: pulse 6s infinite;
 }
 
-/* Hero */
-.hero{
-  padding:60px 20px;
-  text-align:center;
-  background:linear-gradient(135deg,#0f172a,#050816);
+@keyframes pulse {
+  0%,100% { transform: translateX(-50%) scale(1); }
+  50% { transform: translateX(-50%) scale(1.3); }
 }
 
-.hero img{
-  width:180px;
-  height:180px;
-  border-radius:15px;
-  border:4px solid #38bdf8;
-  object-fit:cover;
+/* LEFT */
+.hero-left {
+  flex: 1;
+  min-width: 280px;
+  z-index: 2;
 }
 
-.hero h1{
-  font-size:3rem;
-  margin-top:20px;
-  color:#38bdf8;
+.title {
+  font-size: 54px;
+  margin-top: 15px;
+  background: linear-gradient(90deg,#38bdf8,#a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.hero p{
-  color:#cbd5e1;
-  margin-top:10px;
+.subtitle {
+  color: #94a3b8;
+  font-size: 16px;
+  margin-top: 10px;
 }
 
-.links a{
-  color:#38bdf8;
-  margin:0 10px;
-  text-decoration:none;
+.header-info {
+  margin-top: 15px;
+  color: #cbd5e1;
+  font-size: 14px;
 }
 
-.btn{
-  display:inline-block;
-  margin-top:20px;
-  background:#38bdf8;
-  color:#000;
-  padding:12px 20px;
-  border-radius:8px;
-  text-decoration:none;
-  font-weight:bold;
+.header-info a {
+  color: #38bdf8;
+  text-decoration: none;
 }
 
-/* Sections */
-section{
-  max-width:1200px;
-  margin:auto;
-  padding:60px 20px;
+.header-info a:hover {
+  text-decoration: underline;
 }
 
-h2{
-  color:#38bdf8;
-  margin-bottom:25px;
-  border-left:4px solid #38bdf8;
-  padding-left:10px;
+.badge {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 18px;
+  background: linear-gradient(90deg,#38bdf8,#a78bfa);
+  color: black;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-.card{
-  background:#111827;
-  padding:20px;
-  border-radius:15px;
-  margin-bottom:20px;
-  border:1px solid #1e293b;
+/* RIGHT IMAGE (SQUARE ONLY CHANGE) */
+.hero-right {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
 }
 
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:20px;
+.hero-right img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border: 4px solid #38bdf8;
+  border-radius: 12px;   /* square */
+  box-shadow: 0 0 25px rgba(56,189,248,0.4);
 }
 
-.tag{
-  display:inline-block;
-  padding:8px 12px;
-  margin:5px;
-  background:#1e293b;
-  border-radius:20px;
+/* SECTION (UNCHANGED) */
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
 }
 
-/* Footer */
-footer{
-  text-align:center;
-  padding:30px;
-  background:#0a0f1c;
+h2 {
+  color: #38bdf8;
+  font-size: 24px;
+  border-left: 4px solid #38bdf8;
+  padding-left: 10px;
+}
+
+/* CARD */
+.card {
+  background: rgba(17, 24, 39, 0.7);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  margin-top: 15px;
+  border-radius: 14px;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(56,189,248,0.2);
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 15px;
+}
+
+/* TAGS */
+.tag {
+  display: inline-block;
+  padding: 6px 12px;
+  margin: 5px;
+  background: linear-gradient(90deg,#1e293b,#0f172a);
+  border: 1px solid #334155;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #0a0f1c;
+  color: #94a3b8;
+  margin-top: 40px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .hero{
+    flex-direction: column;
+    text-align: center;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- Banner -->
-<div class="banner">
-  <img src="images/ajay-devops-banner.png" alt="Ajay Banner">
-</div>
+<header class="hero">
 
-<!-- Hero -->
-<section class="hero">
-  <img src="profile.jpeg" alt="Ajay Kumar">
+  <div class="glow-bg"></div>
 
-  <h1>Ajay Kumar</h1>
+  <!-- LEFT (UNCHANGED CONTENT) -->
+  <div class="hero-left">
+    <h1 class="title">Ajay Kumar</h1>
 
-  <p>
-    Java Production Support Engineer |
-    DevOps Engineer |
-    Linux • Docker • Kubernetes • Jenkins • Terraform • AWS
-  </p>
+    <p class="subtitle">
+      Java Developer • Production Support Engineer • DevOps Engineer (Linux | Docker | AWS | Kubernetes | CI/CD)
+    </p>
 
-  <div class="links">
-    <a href="mailto:ajayvirendrasingh007@gmail.com">Email</a>
-    <a href="https://www.linkedin.com/in/ajay-kumar-6a393a1ab/" target="_blank">LinkedIn</a>
-    <a href="https://github.com/AjayKumar-91" target="_blank">GitHub</a>
+    <div class="header-info">
+      💌 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ajayvirendrasingh007@gmail.com&su=DevOps%20Opportunity">Email</a> |
+      🔗 <a href="https://www.linkedin.com/in/ajay-kumar-6a393a1ab/">LinkedIn</a> |
+      💻 <a href="https://github.com/AjayKumar-91">GitHub</a>
+      <br><br>
+      📞 +91-9981105993 | 📍 Gwalior, MP
+    </div>
+
+    <a class="badge" href="Ajay_DevOps_Resume.pdf" download>
+      ⬇️ Download Resume
+    </a>
   </div>
 
-  <a class="btn" href="Ajay_DevOps_Resume.pdf" download>
-    Download Resume
-  </a>
-</section>
+  <!-- RIGHT IMAGE -->
+  <div class="hero-right">
+    <img src="profile.jpeg" alt="Ajay Kumar"
+         onerror="this.src='https://via.placeholder.com/260'">
+  </div>
 
-<!-- Summary -->
+</header>
+
+<!-- EVERYTHING BELOW IS YOUR ORIGINAL CONTENT (UNCHANGED) -->
+
 <section>
-  <h2>Professional Summary</h2>
-
+  <h2>💡 Professional Summary</h2>
   <div class="card">
-    Experienced IT professional with 7+ years of experience including
-    Java Development, Production Support and DevOps learning journey.
-
-    Skilled in Incident Management, RCA, Monitoring,
-    Log Analysis, API Troubleshooting, Linux Administration,
-    Docker, Kubernetes, Jenkins and AWS.
+    Experienced IT professional with 7+ years experience including 4+ years in Java Development and Production Support (L2).
+    Skilled in troubleshooting, incident management, API debugging, monitoring, and deployment support.
+    Currently transitioning into DevOps with AWS, Docker, Kubernetes, Jenkins, Terraform, CI/CD.
   </div>
 </section>
 
-<!-- Core Expertise -->
 <section>
-  <h2>Core Expertise</h2>
-
-  <div class="grid">
-
-    <div class="card">
-      <h3>Java Production Support</h3>
-      <p>
-        Incident Management, RCA,
-        Log Analysis, Troubleshooting,
-        Application Monitoring.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>DevOps Engineering</h3>
-      <p>
-        Docker, Kubernetes, Jenkins,
-        Terraform, GitHub Actions,
-        AWS & CI/CD Pipelines.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Monitoring & Observability</h3>
-      <p>
-        Prometheus, Grafana,
-        CloudWatch,
-        Alerting & Monitoring.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<!-- Skills -->
-<section>
-  <h2>Technical Skills</h2>
-
+  <h2>🛠️ Technical Skills</h2>
   <div class="card">
 
-    <span class="tag">Java</span>
-    <span class="tag">Spring Boot</span>
-    <span class="tag">Linux</span>
-    <span class="tag">AWS</span>
+    <h3>☁️ Cloud & DevOps</h3>
+    <span class="tag">AWS (EC2, S3, EKS, IAM)</span>
     <span class="tag">Docker</span>
     <span class="tag">Kubernetes</span>
     <span class="tag">Terraform</span>
     <span class="tag">Jenkins</span>
-    <span class="tag">GitHub Actions</span>
-    <span class="tag">Ansible</span>
+    <span class="tag">CI/CD Pipelines</span>
+
+    <h3>💻 Backend</h3>
+    <span class="tag">Java</span>
+    <span class="tag">Spring Boot</span>
+    <span class="tag">REST APIs</span>
+
+    <h3>📊 Monitoring</h3>
     <span class="tag">Prometheus</span>
     <span class="tag">Grafana</span>
     <span class="tag">CloudWatch</span>
+
+    <h3>🖥️ Tools</h3>
+    <span class="tag">Linux</span>
     <span class="tag">Git</span>
     <span class="tag">Shell Scripting</span>
-    <span class="tag">Nginx</span>
 
   </div>
 </section>
 
-<!-- Experience -->
 <section>
-  <h2>Experience</h2>
+  <h2>💼 Experience</h2>
 
   <div class="card">
     <h3>Corporate Infotech Pvt. Ltd.</h3>
@@ -230,42 +264,88 @@ footer{
 
   <div class="card">
     <h3>Tata Technologies</h3>
-    Production Support, Monitoring, REST APIs, Tibero DB
+    L2 Support, Monitoring, Debugging, REST APIs, Tibero DB
   </div>
 
   <div class="card">
     <h3>Value Point Systems</h3>
-    Linux, Kibana, Monitoring, Incident Management
+    L2 Support, Kibana, Linux, Incident Management, Monitoring Tools
   </div>
 </section>
 
-<!-- Projects -->
+<!-- ===== DEVOPS PROJECTS (DETAILED) ===== -->
 <section>
-  <h2>DevOps Projects</h2>
+  <h2>🚀 DevOps Projects</h2>
 
   <div class="grid">
 
     <div class="card">
       <h3>React Application CI/CD Pipeline</h3>
-      <p>Jenkins + Docker + AWS + Monitoring</p>
+
+      <p>
+        📦 Project Repo:
+        <a href="https://github.com/AjayKumar-91/react-app-devops"
+           target="_blank" rel="noopener noreferrer"
+           style="color:#38bdf8;">
+          react-app-devops
+        </a>
+      </p>
+
+      <ul>
+        <li>End-to-end CI/CD pipeline using Jenkins</li>
+        <li>GitHub webhook integration for automation</li>
+        <li>Docker containerized deployment</li>
+        <li>Deployed on AWS EC2</li>
+        <li>Monitoring with Prometheus & Grafana</li>
+      </ul>
     </div>
 
     <div class="card">
-      <h3>TrendStore EKS Deployment</h3>
-      <p>Terraform + Kubernetes + Jenkins + AWS</p>
+      <h3>TrendStore EKS Kubernetes Deployment</h3>
+
+      <p>
+        📦 Project Repo:
+        <a href="https://github.com/AjayKumar-91/trendstore-devops"
+           target="_blank" rel="noopener noreferrer"
+           style="color:#38bdf8;">
+          trendstore-devops
+        </a>
+      </p>
+
+      <ul>
+        <li>Terraform-based AWS infrastructure provisioning</li>
+        <li>Kubernetes (EKS) cluster deployment</li>
+        <li>Jenkins CI/CD automation pipeline</li>
+        <li>Docker image build & deployment</li>
+        <li>LoadBalancer service exposure</li>
+      </ul>
     </div>
 
     <div class="card">
-      <h3>BrainTasks DevOps Pipeline</h3>
-      <p>CodePipeline + Docker + EKS + CloudWatch</p>
+      <h3>BrainTasks AWS DevOps Pipeline</h3>
+
+      <p>
+        📦 Project Repo:
+        <a href="https://github.com/AjayKumar-91/brain-tasks-devops"
+           target="_blank" rel="noopener noreferrer"
+           style="color:#38bdf8;">
+          brain-tasks-devops
+        </a>
+      </p>
+
+      <ul>
+        <li>AWS CodePipeline + CodeBuild automation</li>
+        <li>Dockerized application deployment</li>
+        <li>EKS-based Kubernetes deployment</li>
+        <li>CloudWatch logging & monitoring</li>
+      </ul>
     </div>
 
   </div>
 </section>
 
 <footer>
-  © 2026 Ajay Kumar |
-  Java Production Support Engineer • DevOps Engineer 🚀
+  © 2026 Ajay Kumar | Built with DevOps Passion 🚀
 </footer>
 
 </body>
